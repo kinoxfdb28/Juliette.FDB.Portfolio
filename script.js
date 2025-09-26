@@ -12,5 +12,8 @@ btn.addEventListener("click", function() {
   // Appliquer la couleur au fond de la page
   document.body.style.backgroundColor = randomColor;
 });
-
-
+// Menu responsive
+function toggleMenu() {
+  const nav = document.getElementById("navLinks");
+  nav.classList.toggle("active"); // ajoute/enlève la classe active
+}
