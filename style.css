@@ -36,69 +36,41 @@ footer {
   background: #222;
   color: white;
 }
-/* ===== Barre de navigation ===== */
-.navbar {
-  background-color: #222; /* même couleur que ton header */
-  color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-.navbar a {
-  color: white;
-  text-decoration: none;
-  padding: 10px 15px;
-  display: block;
-  transition: background 0.3s;
-}
-
-.navbar a:hover {
-  background-color: #555;
-  border-radius: 5px;
-}
-
-.nav-links {
-  display: flex;
-  gap: 10px;
-}
-
+/* Hamburger menu */
 .menu-icon {
   display: none; /* caché sur desktop */
   font-size: 28px;
   cursor: pointer;
   color: white;
+  z-index: 1001;        /* toujours au-dessus des liens */
+  position: relative;    /* nécessaire pour z-index */
 }
 
 /* Responsive pour mobile */
 @media screen and (max-width: 600px) {
+  .menu-icon {
+    display: block;      /* afficher le hamburger sur mobile */
+  }
+
   .nav-links {
-    display: none; /* caché par défaut */
+    display: none;       /* menu caché par défaut */
     flex-direction: column;
     width: 100%;
     background-color: #222;
+    position: absolute;  /* pour qu’il ne pousse pas les autres éléments */
+    top: 60px;           /* juste en dessous de la navbar */
+    left: 0;
   }
+
   .nav-links a {
     text-align: center;
     padding: 10px;
     border-top: 1px solid #444;
-  }
-  .menu-icon {
-    display: block; /* hamburger visible sur mobile */
   }
 }
 
 /* Afficher le menu quand actif */
 .nav-links.active {
   display: flex;
-}
-
-/* Smooth scroll pour scroll vers sections */
-html {
-  scroll-behavior: smooth;
+  flex-direction: column;
 }
