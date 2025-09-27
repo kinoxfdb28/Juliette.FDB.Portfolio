@@ -36,35 +36,71 @@ footer {
   background: #222;
   color: white;
 }
-/* Hamburger menu */
+/* ===== Navbar ===== */
+.navbar {
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  flex-wrap: wrap; /* important pour mobile */
+}
+
+.navbar .logo a {
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.nav-links a:hover {
+  background-color: #555;
+}
+
+/* Hamburger */
 .menu-icon {
-  display: none; /* caché sur desktop */
+  display: none;
   font-size: 28px;
   cursor: pointer;
   color: white;
-  z-index: 1001;        /* toujours au-dessus des liens */
-  position: relative;    /* nécessaire pour z-index */
+  z-index: 1001;
 }
 
 /* Responsive pour mobile */
 @media screen and (max-width: 600px) {
   .menu-icon {
-    display: block;      /* afficher le hamburger sur mobile */
+    display: block;
   }
-
   .nav-links {
-    display: none;       /* menu caché par défaut */
+    display: none;
     flex-direction: column;
     width: 100%;
     background-color: #222;
-    position: absolute;  /* pour qu’il ne pousse pas les autres éléments */
-    top: 60px;           /* juste en dessous de la navbar */
+    position: absolute;
+    top: 60px; /* sous la navbar */
     left: 0;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
-
   .nav-links a {
     text-align: center;
-    padding: 10px;
     border-top: 1px solid #444;
   }
 }
@@ -72,5 +108,4 @@ footer {
 /* Afficher le menu quand actif */
 .nav-links.active {
   display: flex;
-  flex-direction: column;
 }
