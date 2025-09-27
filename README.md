@@ -60,5 +60,3 @@ Ce projet m’a permis de :
 - Consolider mes bases Linux  
 - Développer une méthodologie de résolution de problèmes techniques  
 - Me familiariser avec des situations réelles rencontrées en administration système et cybersécurité  
-
-Added OverTheWire Bandit project report
