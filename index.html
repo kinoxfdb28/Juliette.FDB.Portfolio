@@ -102,30 +102,26 @@
 </section>
 
 
-<section id="python-interactif">
-  <h2>Python interactif</h2>
-  <p>Entrez votre nom et cliquez sur "Envoyer" :</p>
+<input type="text" id="name" placeholder="Ton nom ici">
+<button id="submitBtn">Envoyer</button>
 
-  <!-- Champ input et bouton -->
-  <input type="text" id="name" placeholder="Ton nom ici">
-  <button id="submitBtn">Envoyer</button>
+<script id="my_script" type="mpy" terminal worker></script>
 
-  <!-- Terminal PyScript -->
-  <py-script output="terminal">
-from js import document
+<script type="module">
+const myterm = document.querySelector("#my_script");
 
-# Fonction pour récupérer la valeur du champ input
-def dire_bonjour(event):
-    nom = document.getElementById("name").value
-    print(f"Bonjour, {nom} ! Bienvenue sur mon portfolio.")
+document.getElementById("submitBtn").addEventListener("click", async () => {
+    const nom = document.getElementById("name").value;
+    await myterm.process(`print("Bonjour, ${nom} ! Bienvenue sur mon portfolio.")`);
+});
+</script>
 
-# Lier le clic du bouton à la fonction
-document.getElementById("submitBtn").addEventListener("click", dire_bonjour)
-  </py-script>
+<script type="py" terminal>print("hello world")</script>
 
-  <!-- Zone où s'affiche le terminal -->
-  <div id="terminal"></div>
-</section>
+
+
+
+
 
 
   <footer>
