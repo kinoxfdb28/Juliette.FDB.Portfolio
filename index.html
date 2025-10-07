@@ -101,16 +101,31 @@
   </ul>
 </section>
 
+
 <section id="python-interactif">
-    <h2>Exemple Python interactif</h2>
-    <p>Entrez votre nom et appuyez sur Entrée :</p>
+  <h2>Python interactif</h2>
+  <p>Entrez votre nom et cliquez sur "Envoyer" :</p>
 
-    <py-script worker terminal>
-nom = input("Quel est ton nom ? ")
-print(f"Bonjour, {nom} ! Bienvenue sur mon portfolio.")
-</py-script>
+  <!-- Champ input et bouton -->
+  <input type="text" id="name" placeholder="Ton nom ici">
+  <button id="submitBtn">Envoyer</button>
+
+  <!-- Terminal PyScript -->
+  <py-script output="terminal">
+from js import document
+
+# Fonction pour récupérer la valeur du champ input
+def dire_bonjour(event):
+    nom = document.getElementById("name").value
+    print(f"Bonjour, {nom} ! Bienvenue sur mon portfolio.")
+
+# Lier le clic du bouton à la fonction
+document.getElementById("submitBtn").addEventListener("click", dire_bonjour)
+  </py-script>
+
+  <!-- Zone où s'affiche le terminal -->
+  <div id="terminal"></div>
 </section>
-
 
 
   <footer>
