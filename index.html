@@ -5,9 +5,13 @@
   <meta charset="UTF-8">
   <title>Portfolio - Juliette</title>
   <link rel="stylesheet" href="style.css">
-  <!-- PyScript pour exécuter du Python dans le navigateur -->
-<link rel="stylesheet" href="https://pyscript.net/latest/pyscript.css" />
-<script defer src="https://pyscript.net/latest/pyscript.js"></script>
+   <!-- Recommended meta tags -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- PyScript CSS -->
+        <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.2/core.css">
+        <!-- This script tag bootstraps PyScript -->
+        <script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
 </head>
 <body>
 <nav class="navbar">
@@ -98,18 +102,16 @@
 </section>
 
 <section id="python-interactif">
-  <h2>Exemple Python interactif</h2>
+    <h2>Exemple Python interactif</h2>
+    <p>Entrez votre nom et appuyez sur Entrée :</p>
 
-  <p>Entrez votre nom ci-dessous et voyez le programme Python répondre :</p>
-
-  <py-script>
-# On demande un nom à l'utilisateur
+    <py-script>
+# Exemple interactif avec input()
 nom = input("Quel est ton nom ? ")
-# On affiche la réponse
 print(f"Bonjour, {nom} ! Bienvenue sur mon portfolio.")
-  </py-script>
-
+    </py-script>
 </section>
+
 
 
   <footer>
