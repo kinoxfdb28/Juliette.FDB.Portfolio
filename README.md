@@ -1,5 +1,4 @@
-# Projet : Analyse Wireshark — Détection DNS (Exemple)
-
+# Projet : Analyse Wireshark — Détection DNS 
 ## Résumé
 Capture et analyse simple de trafic DNS pour détection d'anomalies (beaconing). Objectif pédagogique et démonstration de compétences en analyse réseau défensive.
 
