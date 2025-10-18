@@ -1,3 +1,26 @@
+# Projet : Analyse Wireshark — Détection DNS 
+## Résumé
+Capture et analyse simple de trafic DNS pour détection d'anomalies (beaconing). Objectif pédagogique et démonstration de compétences en analyse réseau défensive.
+
+## Contenu du dépôt
+- `rapport-dns.pdf` — rapport synthétique (1 page).(to be added)
+
+## Méthode
+- Outil : Wireshark  
+- Filtres : `dns` ; ajout d'une colonne `Name` pour faciliter la lecture.  
+- Statistiques : `Statistics → Conversations → DNS` pour compter les requêtes par domaine.
+
+## Observations
+- L’analyse du trafic DNS (filtres Wireshark dns et frame.time_delta_displayed) n’a révélé aucun comportement suspect. 
+- Les requêtes observées correspondent aux activités légitimes de navigation web et aux résolutions DNS standards (1 à 2 requêtes par domaine). 
+- Une simulation manuelle de requêtes répétées via nslookup a permis d’observer un schéma de requêtes régulières, typique d’un beaconing, pour fins d’entraînement
+
+---
+
+
+
+
+
 # Projet : OverTheWire Bandit
 
 ## Contexte
