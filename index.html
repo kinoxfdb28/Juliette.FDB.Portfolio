@@ -8,10 +8,21 @@
    <!-- Recommended meta tags -->
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <!-- PyScript CSS -->
-        <link rel="stylesheet" href="https://pyscript.net/releases/2024.5.2/core.css">
-<script type="module" src="https://pyscript.net/releases/2024.5.2/core.js"></script>
+ <style>
+.thm-badge {
+  display: flex;
+  justify-content: flex-start; /* ou center si tu veux centrer */
+  margin-top: 20px;
+}
 
+.thm-badge iframe {
+  border: none;
+  width: 330px;  /* adapte selon la largeur réelle du badge */
+  height: 85px; /* ajusté pour coller parfaitement au badge */
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+</style>
 </head>
 <body>
 <nav class="navbar">
@@ -34,32 +45,58 @@
   <section id="about">
     <h2>À propos de moi</h2>
     <p>Je me forme actuellement en administration systèmes et réseaux en vue d’intégrer un Bachelor en cybersécurité.</p>
-  </section>
+  <div class="thm-badge">
+  <iframe
+    src="https://tryhackme.com/api/v2/badges/public-profile?userPublicId=5967496"
+    title="TryHackMe profile badge for user 5967496"
+    loading="lazy"
+    style="border:0;"
+  ></iframe>
+</div>
+<!-- Badge Credly -->
+ <div id="mes-badges">
+  <div data-iframe-width="150" data-iframe-height="270" 
+       data-share-badge-id="6713ad72-0fd9-473c-b21c-40fc6b69336a" 
+       data-share-badge-host="https://www.credly.com">
+  </div>
+
+  <div data-iframe-width="150" data-iframe-height="270" 
+       data-share-badge-id="53134076-f6a8-43cd-a73e-ff47962f4aa5" 
+       data-share-badge-host="https://www.credly.com">
+  </div>
+</div>
+
+<script type="text/javascript" async src="https://cdn.credly.com/assets/utilities/embed.js"></script>
+<a href="https://app.letsdefend.io/user/juliette.fdb" target="_blank" rel="noopener noreferrer">
+ <p><li>Voir mon profil LetsDefend</li></p>
+</a>
+</section>
 
   <section id="skills">
     <h2>Compétences</h2>
     <ul>
+      <h4><u>Compétences techniques :</h4></u>
       <li>Linux (commandes de base, gestion d’utilisateurs)</li>
       <li>Réseaux (TCP/IP, OSI, Packet Tracer)</li>
       <li>Python (scripts simples)</li>
-      <li>HTML, CSS, JavaScript</li>
+      <li>HTML</li>
+      <li>Wireshark (analyse de paquets)</li>
+      <h4><u>Compétences transversales :</h4></u>
+      <li>Esprit d’analyse et de logique</li>
+      <li>Autonomie et curiosité technique</li> 
+      <li>Capacité à apprendre rapidement</li>
     </ul>
   </section>
 
   <section id="projects">
     <h2>Projets pratiques</h2>
     <div class="project">
-      <h3>Site web en HTML/CSS</h3>
+      <u><h3>Site web en HTML/CSS</h3></u>
       <p>Une page de présentation simple avec un design responsive.</p>
       <a href="https://kinoxfdb28.github.io/Juliette.FDB.Portfolio/" target="_blank">Voir le projet</a>
     </div>
-    <div class="project">
-      <h3>Script Python</h3>
-      <p>Automatisation d’une sauvegarde de fichiers.</p>
-      <a href="https://github.com/tonpseudo/script-sauvegarde" target="_blank">Voir sur GitHub</a>
-    </div>
     <div class="project-card">
-  <h3>OverTheWire Bandit</h3>
+  <u><h3>OverTheWire Bandit</h3></u>
   <p>Challenge Capture The Flag (CTF) d’initiation à la cybersécurité.  
      Apprentissage de l’administration Linux, SSH et sécurité des systèmes.</p>
   <ul>
@@ -67,32 +104,27 @@
     <li>Navigation et gestion de fichiers sous <strong>Linux</strong></li>
     <li>Utilisation de commandes Unix (grep, find, chmod...)</li>
   </ul>
-  <p>Progression : <strong>15 niveaux complétés</strong></p>
+  <p>Progression : <strong>10 niveaux complétés</strong></p>
   <a href="https://github.com/kinoxfdb28/Juliette.FDB.Portfolio" target="_blank">Voir le compte rendu complet sur GitHub</a>
 </div>
   </section>
 
-  <section id="certifications et badges">
-    <h2>Certifications et badges</h2>
-    <h6>Certificats</h6>
+  <section id="certifications">
+    <h2>Certifications</h2>
     <ul>
       <li>
          <a href="certificats/LearnHowtoCodeCourse.pdf" target="_blank">Codecademy – Code Foundations (2025)</a>
         </li>
-        <li>
-  <a href="https://www.netacad.com/career-paths/cybersecurity?courseLang=en-US" target="_blank">
+        <li><a href="certificats/Learnthecommandline.pdf" target="_blank">Codecacademy - Learn the Command Line</li></a>
+  <li><a href="https://www.netacad.com/career-paths/cybersecurity?courseLang=en-US" target="_blank">
     Introduction to Cybersecurity – Cisco Networking Academy (en cours)
-  </a>
-  <p>Formation de 120 heures actuellement en préparation. À l’issue de cette formation et de l’examen final, obtention possible de la certification 
+  </a></li>
+  <p>-Formation de 120 heures actuellement en préparation. À l’issue de cette formation et de l’examen final, obtention possible de la certification 
     <a href="https://www.cisco.com/site/us/en/learn/training-certifications/exams/ccst-cybersecurity.html" target="_blank">
       Cisco Certified Support Technician (CCST) Cybersecurity
     </a>.
-  </p>
-  <p><strong>Contenu du Career Path Junior Cybersecurity Analyst :</strong> bases de la cybersécurité, fondamentaux des réseaux, configuration initiale des équipements réseau, sécurité des endpoints, défense réseau, gestion des menaces cyber.</p>
+  <p>-<strong>Contenu du Career Path Junior Cybersecurity Analyst :</strong> bases de la cybersécurité, fondamentaux des réseaux, configuration initiale des équipements réseau, sécurité des endpoints, défense réseau, gestion des menaces cyber.</p>
 </li>
-      <li>
-      <a href="certificats/Learnthecommandline.pdf" target="_blank">Codecacademy - Learn the Command Line</li></a>
-      <li>Basics of Computer Networks – Great Learning (2025)</li>
        <a href="https://www.netacad.com/courses/python-essentials-1?courseLang=en-US" target="_blank">
         <li>Python Essentials 1 – Cisco Networking Academy (en cours)
       </a>
@@ -100,33 +132,6 @@
     </li>
   </ul>
 </section>
-
-
-
-<section id="python-terminal">
-  <h2>Python REPL interactif dans le terminal</h2>
-  <p>Tape directement dans le terminal et appuie sur Entrée :</p>
-
-  <!-- Terminal PyScript interactif -->
-  <script id="repl" type="py" terminal worker>
-name = input("Quel est ton nom ? ")
-print(f"Bonjour, {name} ! Bienvenue sur mon portfolio.")
-while True:
-    cmd = input(">>> ")
-    try:
-        result = eval(cmd)
-        if result is not None:
-            print(result)
-    except Exception as e:
-        print(e)
-  </script>
-</section>
-
-
-
-
-
-
   <footer>
     <p>Contact : <a href="mailto:j.foucherdebrandois@proton.me">j.foucherdebrandois@proton.me</a></p>
     <p>© 2025 Juliette – Portfolio d'apprentissage</p>

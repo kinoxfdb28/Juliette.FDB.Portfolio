@@ -16,4 +16,5 @@ btn.addEventListener("click", function() {
 function toggleMenu() {
   const nav = document.getElementById("navLinks");
   nav.classList.toggle("active"); // ajoute/enlève la classe active
+
 }
